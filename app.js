@@ -13,7 +13,7 @@ app.use(express.static("public"));
 app.get("/", function(req,res){
     res.sendFile(__dirname+"/index.html");
 });
-app.listen(3000);
+app.listen(process.env.PORT);
 
 io.on("connection", function(socket){
     console.log("Connect with ", socket.id);

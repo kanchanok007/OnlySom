@@ -2,13 +2,13 @@ var host = location.origin.replace(/^http/, 'ws');
 const socket = io();
 
 let message = document.querySelector("input.textBox");
-let btn = document.querySelector("button");
+let btn = document.querySelector("button.sendButton");
 let chatBoxList = document.querySelector("ul.chatBoxList");
 
+let user = document.getElementById("userName").innerText;
 
 btn.onclick = function(){
-    socket.emit("chat",message.value);
-    //clear input value
+    socket.emit("chat",user+": "+message.value);
     message.value = "";
 };
 
@@ -36,5 +36,3 @@ message.addEventListener("keypress", function(event) {
     btn.click();
   }
 });
-
-

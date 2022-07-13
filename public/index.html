@@ -15,45 +15,30 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Kanit&family=Roboto:wght@500&display=swap" rel="stylesheet">
 
-    <link href="styles.css" rel="stylesheet" />
-
-    <!-- Font Awesome -->
-    <script
-      src="https://kit.fontawesome.com/2cffdae5a6.js"
-      crossorigin="anonymous"
-    ></script>
+    <link href="stylesIndex.css" rel="stylesheet" />
     <script src="/socket.io/socket.io.js"></script>
-    
+
   </head>
+
   <body>
-      <img src="logo.png" alt="OnlySom" />
+    <img src="logo.png" alt="OnlySom" />
 
-    <div class="container">
-        <div class="row chatBox overflow-auto card ">
-              <ul class="chatBoxList"></ul>
-        </div>
+    <h1 class="header">Which one are you?</h1>
 
-      <form class="input row" id="form">
-        <div class="col textBoxContainer">
-          <input
-            type="text"
-            name="messageBox"
-            placeholder="คิดถึงหรอออ~"
-            class="textBox form-control"
-            autocomplete="off"
-          />
+    <div class="userNameContainer">
+      <form method="post">
+        <div class="row userNameButtonContainer">
+            <button type="submit" class="btn userNameButton" name="nameButton" value="Som 🦋">Som 🦋</button>
         </div>
-        <div class="buttonContainer">
-          <button type="button" class="btn sendButton">
-            <i class="fa-solid fa-paper-plane"></i>
-          </button>
+        <div class="row userNameButtonContainer">
+          <button type="submit" class="btn userNameButton" name="nameButton" value="Top 🐯">Top 🐯</button>
         </div>
-      </form>
+    </form>
     </div>
 
   </body>
-  <!-- Logic -->
-  <script src="client.js"></script>
+   <!-- Logic -->
+   <script src="client.js"></script>
 </html>

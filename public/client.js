@@ -1,4 +1,4 @@
-const socket = io('wss://onlysom.herokuapp.com/' || 'ws://localhost:8080/');
+const socket = io('wss://onlysom.herokuapp.com/');
 
 let message = document.querySelector("input.textBox");
 let btn = document.querySelector("button");

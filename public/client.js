@@ -1,4 +1,5 @@
-const socket = io('ws://onlysom.herokuapp.com/socket.io/?EIO=4&transport=websocket');
+var host = location.origin.replace(/^http/, 'ws');
+const socket = io();
 
 let message = document.querySelector("input.textBox");
 let btn = document.querySelector("button");

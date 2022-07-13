@@ -102,6 +102,9 @@ img{
   text-align: center;
   position: relative;
 }
+.sendButton:focus{
+  background-color: #E6B5D8;
+}
 .sendButton:hover {
   background-color: #B5BFE6;
   color: #fff;

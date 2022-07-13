@@ -1,27 +1,25 @@
 const express = require("express");
-// const socket = require("socket.io");
-const http = require('http').createServer();
-
-const io = require('socket.io')(http, {
-    cors: { origin: "*" }
-});
+const socketIO = require("socket.io");
 
 const app = express();
-app.use(express.static("public"));
-// let server = 
+app.use(express.static(__dirname + '/public'));
 
-app.get("/", function(req,res){
-    res.sendFile(__dirname+"/index.html");
+const PORT = process.env.PORT || 3000;
+const INDEX = __dirname+"/index.html";
+
+
+
+const server = app
+.get("/",(req, res) => res.sendFile(INDEX, { root: __dirname }))
+.listen(PORT, () => console.log(`Listening on ${PORT}`));
+
+const io = socketIO(server);
+
+io.on("connection", function (socket) {
+  console.log("Connect with ", socket.id);
+
+  socket.on("chat", function (data) {
+    console.log(data);
+    io.emit("chat", data);
+  });
 });
-app.listen(process.env.PORT);
-
-io.on("connection", function(socket){
-    console.log("Connect with ", socket.id);
-
-    socket.on("chat",function(data){
-        console.log(data);
-        io.emit("chat", data );  
-    });
-});
-
-http.listen(process.env.PORT || 8080, () => console.log('listening on http://localhost:8080') );

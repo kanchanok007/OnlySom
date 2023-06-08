@@ -1,0 +1,111 @@
+html{
+    height: 100%;
+}
+body {
+  background-color: #b5d8e6;
+  height: 100%;
+  font-family: 'Kanit', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+li{
+  border-top: 2px solid #B5BFE6;
+}
+img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-height: 20%;
+    max-width: 70%;
+
+}
+.container{
+    height: 70%;
+    width: 80%;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+.chatBox {
+  height: 100%;
+  width: 100%;
+  text-align: left;
+  margin: 1rem 0;
+  border-radius: 20px;
+  border-color: #E6B5D8;
+  border-width: 5px;
+  background-color: #F5EEEB;
+
+}
+
+.chatBoxList{
+  position: absolute;
+  bottom: 0;
+  overflow-y:auto;
+  max-height: 100%;
+  
+  padding: 0 2rem;
+  line-height: 250%;
+  list-style: none;
+}
+
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #B5BFE6;
+  border-radius: 4px;
+}
+
+
+
+.input{
+  margin: 0%;
+}
+.textBoxContainer{
+    padding: 0%;
+}
+.textBox {
+  height: 50px;
+  width: 100%;
+  position: relative;
+  border-radius: 20px;
+  border-color: #E6B5D8;
+  border-width: 5px;
+  background-color: #F5EEEB;
+}
+.textBox:focus{
+    background-color: #F5EEEB;
+    border-color: #B5BFE6;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 10;
+}
+
+.buttonContainer{
+    width: fit-content;
+    text-align: center;
+}
+.sendButton {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #E6B5D8;
+  color: #fff;
+  font-size: 20px;
+  padding-bottom: 6px;
+  border-width: 0;
+  text-align: center;
+  position: relative;
+}
+.sendButton:focus{
+  background-color: #E6B5D8;
+}
+.sendButton:hover {
+  background-color: #B5BFE6;
+  color: #fff;
+}

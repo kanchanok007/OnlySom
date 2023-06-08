@@ -1,0 +1,22 @@
+{
+  "name": "onlysom",
+  "version": "1.0.0",
+  "description": "Private Chat",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Chat",
+    "app"
+  ],
+  "author": "Kanchanok Thawaranont",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-ws": "^5.0.2",
+    "socket.io": "^4.5.1"
+  }
+}

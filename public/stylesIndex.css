@@ -1,0 +1,59 @@
+html{
+    height: 100%;
+}
+body {
+  background-color: #b5d8e6;
+  height: 100%;
+  font-family: 'Kanit', sans-serif;
+}
+
+img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-height: 20%;
+    max-width: 70%;
+
+}
+.header{
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 5rem;
+}
+.userNameContainer{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.userNameButtonContainer{
+    width: 40%;
+    margin: 2rem auto;
+}
+
+.userNameButton{
+
+    height: 5rem;
+
+    font-size: x-large;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    border-radius: 20px;
+    border-color: #E6B5D8;
+    border-width: 5px;
+    background-color: #F5EEEB;
+}
+
+.userNameButton:hover{
+    border-color: #B5BFE6;
+    background-color: #F5EEEB;
+}
+
+.userNameButton:focus{
+    background-color: #F5EEEB;
+    border-color: #E6B5D8;
+
+}
